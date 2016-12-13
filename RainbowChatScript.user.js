@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Twitch Color Change on Enter
 // @require http://code.jquery.com/jquery-3.1.1.js
-// @namespace  UNSET
+// @namespace  https://github.com/Do-Matrix/RainbowChatScript/blob/master/RainbowChatScript.user.js
 // @version    0.1
 // @description  will randomly select a new color for your twitch chatname each time you hit Enter
 // @match      https://www.twitch.tv/*
