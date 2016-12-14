@@ -8,31 +8,30 @@
 // @copyright  2012+, You
 // ==/UserScript==
 $(document).ready(function() {
-    alert('Rainbowchat Script initialized.');
+    //alert("Colour randomizer initialized");
     $('.js-chat_input').keyup(function(e) {
             if (e.keyCode == 13) {
                  $('.js-chat-buttons__submit').focus();
                  $('.js-chat-buttons__submit').click();
-                 $('.js-chat-buttons__submit').blur();
                  $('.js-chat_input').focus();
                  var letters = '0123456789ABCDEF';
-                 var color = fucker();
+                 var color = '#';
+                 for (var i = 0; i < 6; i++ ) {
+                     if ((i == 2) || (i == 3)) {
+                         color += "0";
+                     }
+                     else {
+                         color += letters[Math.floor(Math.random() * 16)];
+
+                     }
+                 }
                  var command = "/color " + color;
+                //alert(command);
                  $('.js-chat_input').val(command);
                  $('.js-chat-buttons__submit').focus();
                  $('.js-chat-buttons__submit').click();
                  $('.js-chat_input').focus();
         }
     });
-    function fucker() {
-        var letters = '0123456789ABCDEF';
-        var colorcode = '#';
-        colorcode += letters[Math.floor(Math.random() * 16)];
-        colorcode += letters[Math.floor(Math.random() * 16)];
-        colorcode += 0;
-        colorcode += 0;
-        colorcode += letters[Math.floor(Math.random() * 16)];
-        colorcode += letters[Math.floor(Math.random() * 16)];
-        return colorcode;
-    }
 });
+
