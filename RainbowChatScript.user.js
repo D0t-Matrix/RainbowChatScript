@@ -8,7 +8,7 @@
 // @copyright  2012+, You
 // ==/UserScript==
 $(document).ready(function() {
-    $('.js-chat_input').keydown(function(e) {
+    $('.js-chat_input').keyup(function(e) {
         if (e.keyCode == 13) {
              colorchanger();
         }
@@ -19,10 +19,14 @@ $(document).ready(function() {
              hotkey("blank hotkey for future use");
         }
     });
+    var toggle = true;
     function hotkey(text) {
+        if (toggle) {
         var hotkeycommand = "/me " + text;
         messagesender(hotkeycommand);
         colorchanger();
+        }
+        toggle = !toggle;
     }
     function colorchanger() {
         var letters = '0123456789ABCDEF';
