@@ -13,7 +13,7 @@ $(document).ready(function() {
              colorchanger();
         }
         if (e.keyCode == 35) {
-             hotkey("DO A HANDSTAND SwiftRage");
+             hotkey("I AM A HOTKEY SwiftRage");
         }
         if (e.keyCode == 36) {
              hotkey("blank hotkey for future use");
@@ -31,8 +31,9 @@ $(document).ready(function() {
     function colorchanger() {
         var letters = '0123456789ABCDEF';
         var command = "/color #";
-        for (var i = 0; i < 6; i++ ) {
+        for (var i = 0; i < 3; i++ ) {
             command += letters[Math.floor(Math.random() * 16)];
+            command += letters[(1 + Math.floor(Math.random() * 14))];
         }
         messagesender(command);
     }
