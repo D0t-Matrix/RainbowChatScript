@@ -1,5 +1,7 @@
 # RainbowChatScript
 
+> Abandoned as of now. Will be picked up as a replatform to function as an addon to [FrankerFaceZ](https://github.com/FrankerFaceZ)
+
 # Project Goal:
 web script to input a command to change the username color to a random hex color value each time the user sends a message.
 
